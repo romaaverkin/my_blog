@@ -8,11 +8,19 @@ use Symfony\Component\Routing\Annotation\Route;
 class PageController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="home")
      *
      */
     public function indexAction()
     {
         return $this->render('@BloggerBlog/Page/index.html.twig');
+    }
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function aboutAction()
+    {
+        return $this->render('@BloggerBlog/Page/about.html.twig');
     }
 }
